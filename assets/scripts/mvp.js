@@ -20,7 +20,7 @@ class Model {
     async setData(){
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "/assets/scripts/data.json", true);
+            xhr.open("GET", "/it/assets/scripts/data.json", true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4) {
                     if (xhr.status == 200) {

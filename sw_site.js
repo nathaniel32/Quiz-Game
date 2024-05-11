@@ -3,7 +3,7 @@ import Conf from '/conf.js';
 const cacheName = Conf.CacheName;
 
 const cacheAssets = [
-    '/assets/images/isoffline.png'
+    '/it/assets/images/isoffline.png'
 ];
 
 //install

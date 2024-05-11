@@ -20,7 +20,7 @@ const netz_text = document.getElementById("netz_text");
 updateOnlineStatus();
 
 async function updateOnlineStatus() {
-    const imgPath = "/assets/images/"
+    const imgPath = "/it/assets/images/"
     netz_img.src = navigator.onLine ? `${imgPath}isonline.png` : ((await getDataFromCache(`${imgPath}isoffline.png`)) || `${imgPath}gear-spinner.svg`);
     netz_text.textContent = navigator.onLine ? "Online" : 'Offline';
 }

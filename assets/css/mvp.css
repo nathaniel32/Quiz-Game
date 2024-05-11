@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background: #000000 url(/assets/images/header.jpg) no-repeat;
+    background: #000000 url(/it/assets/images/header.jpg) no-repeat;
     height: 10vh;
     background-position: center;
     background-size: cover;
