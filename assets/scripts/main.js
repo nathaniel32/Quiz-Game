@@ -5,7 +5,7 @@ const cacheName = Conf.CacheName;
 if('serviceWorker' in navigator){
     window.addEventListener('load', () => {
         navigator.serviceWorker
-            .register('/sw_site.js', {type: 'module'})
+            .register('/it/sw_site.js', {type: 'module'})
             .then(reg => console.log('SW Registered'))
             .catch(err => console.log("SW Error!"))
     });
