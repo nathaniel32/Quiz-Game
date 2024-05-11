@@ -1,0 +1,250 @@
+/*Formatierung für den body
+Hintergrundfarbe, Schriftfarbe und Schriftfamilie*/
+
+body {
+    background-color: lightgrey;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: auto;
+    margin-right: auto;
+    user-select: none;
+}
+
+header {
+    background: #000000 url(/assets/images/header.jpg) no-repeat;
+    height: 10vh;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 10px;
+}
+
+#navmenu{
+    background: SkyBlue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#answer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/*btn*/
+#navmenu button, .playBtn, #answer button{
+    transition: background-color 0.4s;
+    border-radius:.25rem;
+    border:1px solid transparent;
+    white-space: nowrap;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+#navmenu button{
+    background-color: hsl(180, 23%, 91%);
+    padding: 10px 15px;
+}
+.endPunkt{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.playBtn{
+    background-color: hsl(180, 6%, 13%);
+    color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    width: 100%;
+}
+#answer button{
+    background-color: hsl(0, 0%, 80%);
+    padding: 5px;
+    min-width: 100px;
+    height: 40px;
+}
+/*btn hover*/
+#navmenu button:hover{
+    background-color: hsl(180, 23%, 100%);
+}
+.playBtn:hover{
+    background-color: hsl(180, 74%, 49%);
+}
+#answer button:hover{
+    background-color: hsl(0, 0%, 90%);
+}
+/*---*/
+main {
+    background: LightYellow;
+    overflow: hidden;
+}
+
+aside {
+    background: yellowgreen;
+}
+
+footer {
+    background: Wheat;
+    text-align: center;
+    height: 10vh;
+    padding: 10px;
+}
+
+#navmenu, main, aside{
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+header, main, #navmenu, aside, footer {
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+}
+
+#text_message{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.netz_container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 15px;
+}
+
+#netz_img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+#netz_text{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.container_main{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.grid_item_container_navbar, .grid_item_container_main, .grid_item_container_sidebar{
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+.punkt_bar_container{
+    display: flex;
+    gap: 10px;
+}
+
+.punkt_bar{
+    width: 100%;
+    background-color: rgb(228, 215, 215);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#rPunkt{
+    width: 0%;
+    padding: 3px 0px;
+    background: linear-gradient(90deg, rgb(21, 125, 33) 0%, rgb(80, 233, 66) 100%);
+    transition: width 0.5s ease;
+    border-radius: 5px;
+}
+
+#fPunkt{
+    width: 0%;
+    padding: 3px 0px;
+    background: linear-gradient(90deg, rgb(162, 37, 37) 0%, rgb(255, 0, 0) 100%);
+    transition: width 0.5s ease;
+    border-radius: 5px;
+}
+
+@media (max-width: 575px) {
+    body{
+        max-width: 575px;
+    }
+
+    .grid_item_container_navbar, .grid_item_container_main, .grid_item_container_sidebar{
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    body{
+        max-width: 767px;
+    }
+
+    .grid_item_container_navbar, .grid_item_container_main, .grid_item_container_sidebar{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    body{
+        max-width: 991px;
+    }
+
+    .grid_item_container_navbar{
+        width: calc(40%);
+    }
+
+    .grid_item_container_sidebar{
+        width: 100%;
+    }
+
+    .grid_item_container_main{
+        width: calc(60%);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    body{
+        max-width: 1199px;
+    }
+
+    .grid_item_container_navbar, .grid_item_container_sidebar{
+        width: calc(50%/2);
+    }
+
+    .grid_item_container_main{
+        width: calc(50%);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px){
+    body{
+        max-width: 1399px;
+    }
+
+    .grid_item_container_navbar, .grid_item_container_sidebar{
+        width: calc(45%/2);
+    }
+
+    .grid_item_container_main{
+        width: calc(55%);
+    }
+}
+
+@media (min-width: 1400px) {
+    body{
+        max-width: 1400px;
+    }
+
+    .grid_item_container_navbar, .grid_item_container_sidebar{
+        width: calc(40%/2);
+    }
+
+    .grid_item_container_main{
+        width: calc(60%);
+    }
+}
+
