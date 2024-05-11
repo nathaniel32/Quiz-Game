@@ -1,4 +1,4 @@
-import Conf from '/conf.js';
+import Conf from '/it/conf.js';
 
 const cacheName = Conf.CacheName;
 
