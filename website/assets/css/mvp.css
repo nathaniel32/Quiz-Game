@@ -8,15 +8,21 @@ body {
     margin-left: auto;
     margin-right: auto;
     user-select: none;
+    animation: trOpacity 1s;
 }
 
 header {
-    background: #000000 url(/it/assets/images/header.jpg) no-repeat;
+    background: #000000 url(../images/header.jpg) no-repeat;
     height: 10vh;
     background-position: center;
     background-size: cover;
     color: white;
     padding: 10px;
+}
+
+@keyframes trOpacity {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 #navmenu{
@@ -30,6 +36,34 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: space-around;
+}
+
+.aufgabe_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer_container{
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    gap: 10px;
+}
+
+.aufgabe_h3{
+    text-decoration: rgb(171, 207, 171) wavy underline;
+    text-underline-offset: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#boo{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    word-break: break-word;
 }
 
 /*btn*/
@@ -40,6 +74,8 @@ header {
     white-space: nowrap;
     cursor: pointer;
     touch-action: manipulation;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #navmenu button{
     background-color: hsl(180, 23%, 91%);
@@ -49,25 +85,41 @@ header {
     font-size: 1.5rem;
     font-weight: 600;
 }
+.playBtn_container{
+    display: flex;
+    justify-content: center;
+}
 .playBtn{
     background-color: hsl(180, 6%, 13%);
     color: white;
     padding: 10px 15px;
     margin-top: 10px;
-    width: 100%;
+    width: 50%;
+    font-weight: 600;
+    animation-name: trColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: font-weight 1s ease 0s;
+}
+@keyframes trColor {
+    0%   {background-color: red;}
+    25%  {background-color: yellow; color: rgb(114, 127, 114);}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
 }
 #answer button{
     background-color: hsl(0, 0%, 80%);
     padding: 5px;
     min-width: 100px;
     height: 40px;
+    width: 45%;
 }
 /*btn hover*/
 #navmenu button:hover{
     background-color: hsl(180, 23%, 100%);
 }
 .playBtn:hover{
-    background-color: hsl(180, 74%, 49%);
+    font-weight: 500;
 }
 #answer button:hover{
     background-color: hsl(0, 0%, 90%);
@@ -168,6 +220,53 @@ header, main, #navmenu, aside, footer {
     border-radius: 5px;
 }
 
+.server_address_form_container{
+    padding: 30px 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.server_address_title{
+    margin: 20px 0 10px 0;
+    font-size: 1.1rem;
+}
+
+.server_address_form{
+    display: flex;
+    width: 100%;
+}
+
+.server_address_form > *{
+    border: 1px solid hsl(0, 0%, 87%);
+    color: #322f2f;
+    padding: 7px 10px;
+    outline: 0;
+    transition: background-color 0.15s ease-in-out, color 0.25s ease-in-out;
+    border-radius: 0px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.server_address_form > *:hover{
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 0%);
+}
+
+.input_ip{
+    width: 60%;
+}
+
+.input_port{
+    width: 25%;
+}
+
+.ip_submit_btn{
+    width: 15%;
+    background-color: hsl(208, 25%, 90%);
+    font-size: 0.8rem;
+}
+
 @media (max-width: 575px) {
     body{
         max-width: 575px;
@@ -247,4 +346,3 @@ header, main, #navmenu, aside, footer {
         width: calc(60%);
     }
 }
-
